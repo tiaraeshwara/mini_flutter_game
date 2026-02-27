@@ -1,6 +1,4 @@
-# Project Documentation
-
-## Overview
+# Mini Flutter Game
 This project is a mini flutter game that serves as an example of integrating Flutter with various technologies.
 
 ## Architecture
