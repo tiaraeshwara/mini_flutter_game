@@ -1,16 +1,65 @@
-# mini_flutter_game
+# Project Documentation
 
-A new Flutter project.
+## Overview
+This project is a mini flutter game that serves as an example of integrating Flutter with various technologies.
+
+## Architecture
+The architecture follows a Model-View-ViewModel (MVVM) pattern which helps in separating the user interface from the business logic.
+
+## Prerequisites
+Before running the project, ensure you have the following:
+- Flutter SDK installed
+- Dart SDK installed
+- An IDE of your choice (e.g., VSCode, Android Studio)
+
+## Project Structure
+```
+- lib/
+  - main.dart
+  - models/
+  - views/
+  - viewmodels/
+- assets/
+- test/
+```
 
 ## Getting Started
+To get started with the project, clone the repository and run:
+```bash
+flutter pub get
+flutter run
+```
 
-This project is a starting point for a Flutter application.
+## Configuration
+Ensure your environment variable is set up for:
+- Dart SDK
+- Flutter SDK
 
-A few resources to get you started if this is your first Flutter project:
+## API Endpoints
+- **GET /api/games** - Retrieve the list of games
+- **POST /api/games** - Add a new game
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Database Schema
+- **games** table
+  - `id`: Integer, Primary Key
+  - `name`: String
+  - `description`: String
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Technologies Used
+- Flutter
+- Dart
+- Firebase
+
+## Building & Running
+To build the application for production, use:
+```bash
+flutter build apk
+```
+To run the application on an emulator, use:
+```bash
+flutter emulators --launch <emulator_id>
+```
+
+## Notes & Improvements
+- Consider adding more complex game logic.
+- Improve UI design for better user experience.
