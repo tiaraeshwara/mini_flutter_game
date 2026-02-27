@@ -33,7 +33,7 @@ class _RockPaperScissorsPageState extends State<RockPaperScissorsPage> {
 
   String _userChoice = '-';
   String _computerChoice = '-';
-  String _resultMessage = 'Choose Rock, Paper, or Scissors to start!';
+  String _resultMessage = 'Make your move!';
 
   int _playerScore = 0;
   int _computerScore = 0;
@@ -69,7 +69,7 @@ class _RockPaperScissorsPageState extends State<RockPaperScissorsPage> {
     setState(() {
       _userChoice = '-';
       _computerChoice = '-';
-      _resultMessage = 'Choose Rock, Paper, or Scissors to start!';
+      _resultMessage = 'Make your move!';
       _playerScore = 0;
       _computerScore = 0;
     });
@@ -87,40 +87,38 @@ class _RockPaperScissorsPageState extends State<RockPaperScissorsPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.surfaceContainerHighest,
-                borderRadius: BorderRadius.circular(12),
-              ),
+            Center(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(height: 24),
                   Text(
-                    'User choice: $_userChoice',
+                    'Your Choice:${_userChoice == '-' ? '' : ' $_userChoice'}',
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 4),
                   Text(
-                    'Computer choice: $_computerChoice',
+                    'Computer Choice:${_computerChoice == '-' ? '' : ' $_computerChoice'}',
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(height: 120),
+                  Text(
+                    _resultMessage,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 16),
-            Text(
-              _resultMessage,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 24),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
